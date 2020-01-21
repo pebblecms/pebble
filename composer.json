@@ -1,0 +1,65 @@
+{
+  "name": "pebblecms/pebble",
+  "description": "Laravel Pebble CMS",
+  "keywords": [
+    "dynamic",
+    "routes",
+    "slugs",
+    "eloquent",
+    "laravel",
+    "translation",
+    "localization",
+    "cms"
+  ],
+  "homepage": "https://github.com/pebblecms/pebble",
+  "type": "laravel-package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marc Guinea",
+      "email": "develop.marcguinea@gmail.com",
+      "homepage": "https://www.marcguinea.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php" : "^7.3",
+    "illuminate/database": "^6.0",
+    "illuminate/support": "^6.0",
+    "pebblecms/laravel-translatable": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.4",
+    "orchestra/testbench": "^4.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@github.com:pebblecms/laravel-translatable.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Pebble\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pebble\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pebble\\PebbleServiceProvider"
+      ]
+    }
+  }
+}
